@@ -31,5 +31,18 @@ jobs:
         working-directory: ./backend
         run: pip install -r requirements.txt
 
-      - name: Build Docker image
-        run: docker build -t portfolio-backend:${{ github.sha }} ./backend
+      - name: Log in to ACR
+        if: github.event_name == 'push'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.ACR_LOGIN_SERVER }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/portfolio-backend:${{ github.sha }} -t ${{ secrets.ACR_LOGIN_SERVER }}/portfolio-backend:latest ./backend
+          if [ "${{ github.event_name }}" = "push" ]; then
+            docker push ${{ secrets.ACR_LOGIN_SERVER }}/portfolio-backend:${{ github.sha }}
+            docker push ${{ secrets.ACR_LOGIN_SERVER }}/portfolio-backend:latest
+          fi
