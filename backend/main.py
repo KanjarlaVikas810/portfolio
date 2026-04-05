@@ -14,9 +14,9 @@ app.add_middleware(
 @app.get("/api/profile")
 def get_profile():
     return {
-        "name": "Alex Developer",
-        "role": "Cloud & DevOps Engineer",
-        "summary": "Building scalable cloud-native applications on Microsoft Azure.",
+        "name": "Vikas Kanjarla",
+        "role": "Cloud & DevOps Engineer | EY",
+        "summary": "Building scalable cloud-native applications on Microsoft Azure. Passionate about containers, Kubernetes, and CI/CD pipelines.",
     }
 
 
@@ -112,16 +112,10 @@ def get_skills():
 def get_experience():
     return [
         {
-            "role": "Cloud Engineer",
-            "company": "Tech Corp",
+            "role": "Cloud & DevOps Engineer",
+            "company": "EY (Ernst & Young)",
             "period": "2023 - Present",
-            "description": "Designing and maintaining cloud infrastructure on Azure.",
-        },
-        {
-            "role": "DevOps Engineer",
-            "company": "StartupXYZ",
-            "period": "2021 - 2023",
-            "description": "Built CI/CD pipelines and containerized microservices.",
+            "description": "Building cloud-native solutions on Azure, containerizing applications with Docker, and deploying to AKS with CI/CD pipelines.",
         },
     ]
 
@@ -129,9 +123,8 @@ def get_experience():
 @app.get("/api/certifications")
 def get_certifications():
     return [
-        {"name": "AZ-900: Azure Fundamentals", "issuer": "Microsoft", "year": "2023"},
-        {"name": "AZ-104: Azure Administrator", "issuer": "Microsoft", "year": "2024"},
-        {"name": "CKA: Certified Kubernetes Admin", "issuer": "CNCF", "year": "2024"},
+        {"name": "AZ-900: Azure Fundamentals", "issuer": "Microsoft", "year": "2024"},
+        {"name": "AZ-104: Azure Administrator", "issuer": "Microsoft", "year": "2025"},
     ]
 
 
@@ -141,7 +134,7 @@ def get_education():
         {
             "degree": "B.Tech Computer Science",
             "school": "University of Technology",
-            "year": "2021",
+            "year": "2023",
         },
     ]
 
