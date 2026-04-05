@@ -5,6 +5,7 @@ import ProfileCard from './components/ProfileCard'
 import ServicesGrid from './components/ServicesGrid'
 import ResourcesTable from './components/ResourcesTable'
 import NavigateGrid from './components/NavigateGrid'
+import TechStack from './components/TechStack'
 import DetailPage from './components/DetailPage'
 
 const API = import.meta.env.VITE_API_URL || ''
@@ -75,6 +76,7 @@ function App() {
           <div className="az-home">
             <ProfileCard />
             <ServicesGrid services={services} onServiceClick={openService} />
+            <TechStack />
             <ResourcesTable resources={resources} />
             <NavigateGrid />
           </div>

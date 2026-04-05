@@ -224,6 +224,43 @@
   margin: 0 0 16px;
 }
 
+/* ========== Tech Stack ========== */
+
+.az-techstack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.az-techstack-category {
+  padding: 16px;
+  border: 1px solid #edebe9;
+  border-radius: 4px;
+}
+
+.az-techstack-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #605e5c;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.az-techstack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.az-techstack-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 /* ========== Services Grid ========== */
 
 .az-services-grid {

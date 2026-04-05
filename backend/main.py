@@ -163,3 +163,41 @@ def get_education():
 @app.get("/api/health")
 def health():
     return {"status": "healthy"}
+
+
+@app.get("/api/techstack")
+def get_techstack():
+    return [
+        {
+            "category": "Programming Languages",
+            "items": ["Java (FSE)", "C", "C++", ".NET", "JavaScript"],
+        },
+        {
+            "category": "Backend Development",
+            "items": ["Spring Boot", "JPA", "REST APIs", "Maven", "JPA/Hibernate"],
+        },
+        {
+            "category": "Frontend & Design",
+            "items": ["React JS", "HTML5", "CSS3", "Tailwind CSS", "JavaScript ES6+"],
+        },
+        {
+            "category": "Cloud & DevOps",
+            "items": ["Azure", "Docker", "Kubernetes", "GitHub Actions", "Terraform"],
+        },
+        {
+            "category": "Databases",
+            "items": ["MySQL", "DBMS"],
+        },
+        {
+            "category": "Data & Analytics",
+            "items": ["Power BI", "DAX", "Dashboard Design", "Power Query"],
+        },
+        {
+            "category": "Blockchain",
+            "items": ["Solidity", "Ganache", "Truffle Suite", "Web3.js", "Smart Contracts"],
+        },
+        {
+            "category": "Tools",
+            "items": ["VS Code", "Eclipse", "Postman", "Git", "MS Excel", "Power BI Desktop"],
+        },
+    ]
